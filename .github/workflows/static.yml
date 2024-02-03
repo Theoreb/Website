@@ -18,7 +18,6 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -28,7 +27,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14' # Specify the Node.js version you want to use
+          node-version: '20' # Specify the Node.js version you want to use
 
       # Install dependencies (including TypeScript)
       - name: Install Dependencies
