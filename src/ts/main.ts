@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from './auth.js';
+import { signInWithEmailAndPassword, signOut, onAuthStateChanged } from './auth';
 
 // Exemple de connexion avec un e-mail et un mot de passe
 signInWithEmailAndPassword('user@example.com', 'password')
