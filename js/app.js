@@ -19,5 +19,11 @@ export class App {
     win = new Window(name)
     win.create(this.root);
     this.windows.push(win);
+    return win;
+  }
+
+  removeWindow(win) {
+      win.destroy();
+      this.windows.splice(this.windows.indexOf(win), 1);
   }
 }

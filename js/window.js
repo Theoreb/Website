@@ -14,7 +14,7 @@ export class Window {
         this.element.style = `top: ${this.top}px; left: ${this.left}px; width: ${this.width}px; height: ${this.height}px`;
     }
 
-    render() {
-        
+    destroy() {
+        this.element.remove();
     }
 }
