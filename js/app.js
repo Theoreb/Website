@@ -1,33 +1,23 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
-// https://firebase.google.com/docs/web/setup#available-libraries
+class App {
+  constructor(name, version) {
+    this.name = name;
+    this.version = version;
+    this.windows = [];
+    this.root = null;
+  }
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDxew1oJvqE0wcxjwp0OdXh3QoCnqFn7FY",
-  authDomain: "website-38571.firebaseapp.com",
-  databaseURL: "https://website-38571-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "website-38571",
-  storageBucket: "website-38571.appspot.com",
-  messagingSenderId: "770828667083",
-  appId: "1:770828667083:web:de60c85d9266aedffcb34e"
-};
+  getAppVersion() {
+    return this.version;
+  }
 
-const app = initializeApp(firebaseConfig);
+  initialize() {
+    this.root = document.getElementById("root");
+    console.log("App initialized: " + this.name + " v" + this.getAppVersion());
+  }
 
-const auth = getAuth(app);
-
-function authenticate(email, password) {
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log("User signed in:", user);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.error("Authentication error:", errorMessage);
-    });
+  addWindow(name) {
+    win = new Window(name)
+    win.create(this.root);
+    this.windows.push(win);
+  }
 }
-
-// Call the function to connect and authenticate
-authenticate("user@example.com", "password");
