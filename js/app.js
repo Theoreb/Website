@@ -1,4 +1,4 @@
-class App {
+export class App {
   constructor(name, version) {
     this.name = name;
     this.version = version;

@@ -1,4 +1,4 @@
-class Window {
+export class Window {
     constructor(name) {
         this.name = name;
         this.top = 0;
@@ -11,10 +11,7 @@ class Window {
     create(root) {
         this.element = document.createElement("div");
         this.element.className = "Window";
-        this.element.style.top = this.top + "px";
-        this.element.style.left = this.left + "px";
-        this.element.style.width = this.width + "px";
-        this.element.style.height = this.height + "px";
+        this.element.style = `top: ${this.top}px; left: ${this.left}px; width: ${this.width}px; height: ${this.height}px`;
     }
 
     render() {
