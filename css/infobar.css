@@ -1,0 +1,50 @@
+div.Infobar {
+    user-select: none;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    opacity: 80%;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(29,33,41,255);
+    z-index: 100;
+}
+
+.Indicator {
+    position: absolute;
+    overflow: hidden;
+    top: calc(25% / 2);
+    height: 75%;
+    width: fit-content;
+    user-select: none;
+
+    background-color: rgba(41,45,53,255);
+    border-radius: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#OSName {
+    left: 10px;
+}
+
+#ProcessCount {
+    right: 10px;
+}
+
+#Clock {
+    left: calc(50% - 100px);
+    width: 100px;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    text-align: center;
+    justify-content: center;
+}

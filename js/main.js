@@ -1,4 +1,6 @@
-import { App } from "./app.js";
+import { OS } from "./os.js";
 
-const app = new App("Website", '0.0.0');
-app.Initialize();
+const os = new OS("Website", '0.0.0');
+os.create();
+
+os.addProcess("shell");

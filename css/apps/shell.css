@@ -1,0 +1,26 @@
+.Console {
+    outline: none;
+    border: none;
+    overflow: hidden;
+    overflow-y: auto;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+
+    width: calc(100% - 20px) !important;
+    height: calc(100% - 33px) !important;
+    padding: 10px 10px 0px 10px;
+
+    color: white;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    background-color: rgba(29,33,41,255);
+
+    scrollbar-width: thin;
+    scrollbar-color: #c0c0c0 #f0f0f0;
+}
+
+.Console div[contenteditable="true"]{
+    caret-color: white;
+    cursor: text;
+}
